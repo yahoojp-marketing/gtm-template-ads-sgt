@@ -10,7 +10,8 @@ ___INFO___
 
 {
   "displayName": "Yahoo広告 サイトジェネラルタグ",
-  "description": "Yahoo!検索広告とYahoo!ディスプレイ広告で利用するサイトジェネラルタグです。",
+  "description": "Yahoo!検索広告とYahoo!ディスプレイ広告で利用するサイトジェネラルタグです。\n※タグの実行順序について注意点があります。下の「リンク」にある「ドキュメント」をクリックしてご確認ください。",
+  "categories": ["ADVERTISING", "MARKETING"],
   "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
@@ -30,7 +31,7 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
-    "displayName": "\u003ca href\u003d\"https://support-marketing.yahoo.co.jp/promotionalads/ss/articledetail?lan\u003dja\u0026aid\u003d47048\"\u003eサイトジェネラルタグについて\u003c/a\u003e",
+    "displayName": "\u003ca href\u003d\"https://support-marketing.yahoo.co.jp/promotionalads/ss/articledetail?lan\u003dja\u0026aid\u003d47048\"\u003eサイトジェネラルタグについて\u003c/a\u003e\u003cbr\u003e\n※タグの実行順序について注意点があります。上の「サイトジェネラルタグについて」をクリックしてドキュメントをご確認ください。\u003cbr\u003e\u003cbr\u003e",
     "name": "product_link",
     "type": "LABEL"
   },
@@ -48,11 +49,12 @@ ___TEMPLATE_PARAMETERS___
     "groupStyle": "ZIPPY_CLOSED",
     "subParams": [
       {
-        "displayName": "",
+        "displayName": "オプション入力欄",
         "simpleValueType": true,
         "name": "option",
         "type": "TEXT",
-        "lineCount": 2
+        "lineCount": 2,
+        "help": "「自動タグ拡張機能」をご利用の場合は「自動タグ拡張機能」用スクリプトを入力してください。\u003cbr/\u003e ※「自動タグ拡張機能」は導入上の注意事項を理解した上でご利用ください。"
       }
     ]
   }
@@ -79,13 +81,13 @@ const onSuccess = () => {
     log("ycl_cookie : on");
   }
   
-  if (data.option.indexOf(OPTION_YCL_COOKIE_EXTENDED) != -1) {
+  if (data.option && data.option.indexOf(OPTION_YCL_COOKIE_EXTENDED) != -1) {
 	ytag({ type : "ycl_cookie_extended" });
     log("ycl_cookie_extended : on");
   }
   
   data.gtmOnSuccess();
-};
+};	
 
 const onFailure = () => {
   log('Conductrics: Script load failed.');
@@ -252,6 +254,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 2020/3/18 11:36:20
+Created on 2020/4/30 16:50:10
 
 
