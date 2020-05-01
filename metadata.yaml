@@ -17,7 +17,7 @@ documentation: "https://ads-help.yahoo.co.jp/yahooads/ss/articledetail?lan=ja&ai
 versions:
   # Latest version
   - sha: c25c3f21b074b40a8192f31a7d9e7caa4a70ef1e
-    changeNotes: �s��C�� - �^�O���s�����w�肵���ꍇ�A�㑱�̃^�O�����s����Ȃ��s����C�����܂���
+    changeNotes: 不具合修正 - タグ実行順を指定した場合、後続のタグが実行されない不具合を修正しました
 
   # Older versions
   - sha: 9a48e7f81231606ee0feeddcbb24e22e971b8183
