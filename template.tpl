@@ -11,8 +11,7 @@ ___INFO___
 {
   "displayName": "Yahoo広告 サイトジェネラルタグ",
   "description": "Yahoo!検索広告とYahoo!ディスプレイ広告で利用するサイトジェネラルタグです。\n※タグの実行順序について注意点があります。下の「リンク」にある「ドキュメント」をクリックしてご確認ください。",
-  "categories": ["ADVERTISING", "MARKETING"],
-  "securityGroups": [],
+  "securityGroups": ["ADVERTISING", "MARKETING"],
   "id": "cvt_temp_public_id",
   "type": "TAG",
   "version": 1,
@@ -40,7 +39,23 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true,
     "name": "ycl_cookie",
     "checkboxText": "コンバージョン補完機能を利用する",
-    "type": "CHECKBOX"
+    "type": "CHECKBOX",
+    "subParams": [
+      {
+        "type": "CHECKBOX",
+        "name": "ycl_use_non_cookie_storage",
+        "checkboxText": "Cookie以外のストレージをコンバージョン測定補完機能に利用する",
+        "simpleValueType": true,
+        "help": "この設定をオンにするとコンバージョン測定補完機能でCookie以外のブラウザストレージ領域が使用されます。",
+        "enablingConditions": [
+          {
+            "paramName": "ycl_cookie",
+            "paramValue": true,
+            "type": "EQUALS"
+          }
+        ]
+      }
+    ]
   },
   {
     "type": "GROUP",
@@ -77,7 +92,12 @@ const onSuccess = () => {
   
   var ytag = createArgumentsQueue('ytag', 'yjDataLayer');
   if (data.ycl_cookie) {
-    ytag({ type : "ycl_cookie" });
+    if (data.ycl_use_non_cookie_storage) {
+        ytag({ type : "ycl_cookie", config : { ycl_use_non_cookie_storage : true } });
+        log("ycl_use_non_cookie_storage : on");
+      } else {
+        ytag({ type : "ycl_cookie" });
+      }
     log("ycl_cookie : on");
   }
   
@@ -254,6 +274,6 @@ scenarios: []
 
 ___NOTES___
 
-Created on 2020/4/30 16:50:10
+Created on 2020/8/26 15:45:38
 
 
