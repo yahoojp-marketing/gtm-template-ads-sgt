@@ -11,7 +11,8 @@ ___INFO___
 {
   "displayName": "Yahoo広告 サイトジェネラルタグ",
   "description": "Yahoo!検索広告とYahoo!ディスプレイ広告で利用するサイトジェネラルタグです。\n※タグの実行順序について注意点があります。下の「リンク」にある「ドキュメント」をクリックしてご確認ください。",
-  "securityGroups": ["ADVERTISING", "MARKETING"],
+  "categories": ["ADVERTISING", "MARKETING"],
+  "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
   "version": 1,
