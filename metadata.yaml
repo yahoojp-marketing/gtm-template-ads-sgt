@@ -16,10 +16,12 @@ homepage: "https://www.lycbiz.com/jp/service/yahoo-ads/"
 documentation: "https://ads-help.yahoo-net.jp/s/article/H000044574?language=ja"
 versions:
   # Latest version
-  - sha: 26b84f991506ccf2b657cd93bcbc3a12881c7ad6
-    changeNotes: Update information
+  - sha: 0000000000000000000000000000000000000000
+    changeNotes: 一部項目のデフォルト設定を変更しました
 
   # Older versions
+  - sha: 26b84f991506ccf2b657cd93bcbc3a12881c7ad6
+    changeNotes: Update information
   - sha: 0ff76c55d077974a6aca6d8e4a11c0f7847ad7d4
     changeNotes: コンバージョン測定補完機能にCookie以外のストレージを利用するオプションの設定を追加しました
   - sha: c25c3f21b074b40a8192f31a7d9e7caa4a70ef1e
