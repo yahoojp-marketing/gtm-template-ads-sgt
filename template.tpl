@@ -9,8 +9,8 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "Yahoo広告 サイトジェネラルタグ",
-  "description": "Yahoo!検索広告とYahoo!ディスプレイ広告で利用するサイトジェネラルタグです。\n※タグの実行順序について注意点があります。下の「リンク」にある「ドキュメント」をクリックしてご確認ください。",
+  "displayName": "LINEヤフー広告 サイトジェネラルタグ",
+  "description": "LINEヤフー広告 検索広告とLINEヤフー広告 ディスプレイ広告で利用するサイトジェネラルタグです。\n※タグの実行順序について注意点があります。下の「リンク」にある「ドキュメント」をクリックしてご確認ください。",
   "categories": [
     "ADVERTISING",
     "MARKETING"
