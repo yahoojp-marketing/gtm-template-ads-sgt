@@ -34,7 +34,7 @@ ___TEMPLATE_PARAMETERS___
 
 [
   {
-    "displayName": "\u003ca href\u003d\"https://support-marketing.yahoo.co.jp/promotionalads/ss/articledetail?lan\u003dja\u0026aid\u003d47048\"\u003eサイトジェネラルタグについて\u003c/a\u003e\u003cbr\u003e\n※タグの実行順序について注意点があります。上の「サイトジェネラルタグについて」をクリックしてドキュメントをご確認ください。\u003cbr\u003e\u003cbr\u003e",
+    "displayName": "\u003ca href\u003d\"https://ads-help.yahoo-net.jp/s/article/H000044574\"\u003eサイトジェネラルタグについて\u003c/a\u003e\u003cbr\u003e\n※タグの実行順序について注意点があります。上の「サイトジェネラルタグについて」をクリックしてドキュメントをご確認ください。\u003cbr\u003e\u003cbr\u003e",
     "name": "product_link",
     "type": "LABEL"
   },
@@ -281,5 +281,3 @@ scenarios: []
 ___NOTES___
 
 Created on 2020/8/26 15:45:38
-
-
